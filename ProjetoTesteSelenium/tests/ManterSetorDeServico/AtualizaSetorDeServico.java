@@ -40,16 +40,16 @@ public class AtualizaSetorDeServico {
 	}
 
 	@Test
-	public void testAtualizagerenciaregional() throws Exception {
+	public void testAtualizaSetorDeServico() throws Exception {
 		
 		driver.get(baseUrl + "/scriptcase/app/SIGO/sigo_menu/");
 	    
 	    //JavascriptExecutor é usado para executar funções JS
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("openMenuItem('sigo_menu_item_1')", "");
+	    js.executeScript("openMenuItem('sigo_menu_item_2')", "");
 	    
-	    driver.switchTo().frame("sigo_menu_item_1_iframe");
-	    Thread.sleep(1000);
+	    driver.switchTo().frame("sigo_menu_item_2_iframe");
+	    Thread.sleep(2000);
 	    driver.findElement(By.id("id_img_bedit")).click();
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("sc_b_upd_t")).click();
@@ -57,11 +57,8 @@ public class AtualizaSetorDeServico {
 	    driver.switchTo().alert().accept();
 	    System.out.println(driver.findElement(By.id("resposta_cadastro")).getText());
 	    
-	    assertTrue(driver.findElement(By.id("resposta_cadastro")).getText().matches("^[\\s\\S]*Gerência Regional atualizada com sucesso![\\s\\S]*$"));
+	    assertTrue(driver.findElement(By.id("resposta_cadastro")).getText().matches("^[\\s\\S]*Setor atualizado com sucesso![\\s\\S]*$"));
 	    
-	    Thread.sleep(5000);
-	    driver.findElement(By.name("Bmens")).click();
-
 	}
 
 }

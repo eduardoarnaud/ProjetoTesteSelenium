@@ -41,7 +41,7 @@ public class IncluirGerenciaRegional {
 	}
 
 	@Test
-	public void testAtualizagerenciaregional() throws Exception {
+	public void testIncluigerenciaregional() throws Exception {
 		String log="";
 		driver.get(baseUrl + "/scriptcase/app/SIGO/sigo_menu/");
 	    driver.findElement(By.cssSelector("#item_5 > span")).click();
