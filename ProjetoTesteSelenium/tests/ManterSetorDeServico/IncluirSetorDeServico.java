@@ -14,8 +14,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
-
 public class IncluirSetorDeServico {
 
 	private WebDriver driver;
